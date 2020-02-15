@@ -53,13 +53,12 @@ client.on('message', message => {
         message.room.send('Pong!');
     }
 
-    if (message.text === '!leave') {
-        message.room.send('Entiendo que no me necesiten\nadios :c');
-        message.room.leave();
-    }
-
     if (message.text === '!logs') {
         message.room.send(`Puedes ver los registros de este chat en ${process.env.CHATLOGS_FRONTEND_URL}`);
     }
 
+});
+
+client.on('room.private', room => {
+    room.send('¡Hola! Soy un bot, por el momento me dedico solamente a registrar los mensajes del chat, pero pronto podré hacer más cosas.');
 });
