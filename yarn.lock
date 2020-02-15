@@ -352,7 +352,7 @@ tough-cookie@^3.0.1:
 
 "wikichat@https://github.com/TheNozomi/WikiChat":
   version "0.0.14"
-  resolved "https://github.com/TheNozomi/WikiChat#3ce120df96d6e68b9ee5585f122a9460957840c5"
+  resolved "https://github.com/TheNozomi/WikiChat#0261958b0506be77001d73ddaa3b6bd86f213027"
   dependencies:
     axios "^0.19.0"
     qs "^6.9.1"

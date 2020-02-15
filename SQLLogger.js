@@ -22,7 +22,7 @@ class SQLLogger {
 	}
 
 	logMessage(message) {
-    if (message.room.isPrivate) return; //ignore privat messages
+    if (message.room.isPrivate) return; //ignore private messages
     if (message.text.startsWith('/me ')) {
       this.sql.execute('INSERT INTO `logs` (timestamp, user, log_line, event, user_count) VALUES(NOW(), ?, ?, ?, ?)',
         [message.user.name, message.text.replace(/^\/me /g, ''), 'ME', message.room.users.size],
@@ -39,22 +39,25 @@ class SQLLogger {
 	}
 
   logUserJoin(user) {
-    this.sql.execute('INSERT INTO `logs` (timestamp, user, event) VALUES(NOW(), ?, ?)',
-      [user.name, 'JOIN'],
+    if (user.room.isPrivate) return; //ignore private rooms
+    this.sql.execute('INSERT INTO `logs` (timestamp, user, event, user_count) VALUES(NOW(), ?, ?, ?)',
+      [user.name, 'JOIN', user.chat.room.users.size],
       (err, results, fields) => {
         if (err) throw err;
     });
   }
 
   logUserLeave(user) {
-    this.sql.execute('INSERT INTO `logs` (timestamp, user, event) VALUES(NOW(), ?, ?)',
-      [user.name, 'PART'],
+    if (user.room.isPrivate) return; //ignore private rooms
+    this.sql.execute('INSERT INTO `logs` (timestamp, user, event, user_count) VALUES(NOW(), ?, ?, ?)',
+      [user.name, 'PART', user.chat.room.users.size],
       (err, results, fields) => {
         if (err) throw err;
     });
   }
 
   logKick(room, kickedUser, moderator) {
+    if (room.isPrivate) return; //ignore private rooms
     this.sql.execute('INSERT INTO `logs` (timestamp, user, target, event, user_count) VALUES(NOW(), ?, ?, ?, ?)',
       [moderator.name, kickedUser.name, 'KICK', room.users.size],
       (err, results, fields) => {
@@ -63,6 +66,7 @@ class SQLLogger {
   }
 
   logBan(room, evt) {
+    if (room.isPrivate) return; //ignore private rooms
     this.sql.execute('INSERT INTO `logs` (timestamp, user, target, ban_reason, ban_time, event, user_count) VALUES(NOW(), ?, ?, ?, ?, ?, ?)',
       [evt.moderator.name, evt.bannedUser.name, evt.reason, evt.banLength, 'BAN', room.users.size],
       (err, results, fields) => {
@@ -71,6 +75,7 @@ class SQLLogger {
   }
 
   logUnban(room, evt) {
+    if (room.isPrivate) return; //ignore private rooms
     this.sql.execute('INSERT INTO `logs` (timestamp, user, target, ban_reason, event, user_count) VALUES(NOW(), ?, ?, ?, ?, ?)',
       [evt.moderator.name, evt.unbannedUserName, evt.reason, 'UNBAN', room.users.size],
       (err, results, fields) => {
