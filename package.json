@@ -1,0 +1,13 @@
+{
+  "name": "ChatLogger",
+  "version": "0.1.1",
+  "dependencies": {
+    "consola": "^2.11.3",
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.1.0",
+    "wikichat": "https://github.com/TheNozomi/WikiChat"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
