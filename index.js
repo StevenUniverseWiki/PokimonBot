@@ -2,8 +2,6 @@ require('dotenv').config();
 const { Client } = require('wikichat'),
     consola = require('consola');
 
-const SQLLogger = require('./SQLLogger');
-
 consola.info(`${require('./package.json').name} v${require('./package.json').version}`);
 
 const client = new Client({
@@ -17,6 +15,11 @@ const client = new Client({
     ]
 });
 
+// require bot modules
+const SQLLogger = require('./modules/SQLLogger'),
+    DiscordBridge = require('./modules/DiscordBridge');
+
+// create modules instance
 const sqlLog = new SQLLogger({
     host: process.env.SQL_HOST,
     port: process.env.SQL_PORT,
@@ -25,7 +28,12 @@ const sqlLog = new SQLLogger({
     db: process.env.SQL_DB,
     maxConnections: process.env.SQL_MAXCONNECTIONS
 });
-sqlLog.setup(client);
+
+const discord = new DiscordBridge();
+
+// attach modules to client
+if (process.env.NODE_ENV === 'production') client.use(sqlLog);
+client.use(discord);
 
 client.on('ready', () => {
     consola.success(`Logged in as ${client.user.name}`);
