@@ -67,6 +67,11 @@ client.on('message', message => {
 
 });
 
+client.on('kick', (room, victim, killer) => {
+    if(victim.name === client.user.name) room.send(`La concha de tu madre ${killer.name}, das asco con tu cara de gil.`);
+    //setTimeout(() => room.send('owo'), 500);
+});
+
 client.on('room.private', room => {
     room.send('¡Hola! Soy un bot, por el momento me dedico solamente a registrar los mensajes del chat, pero pronto podré hacer más cosas.');
 });
