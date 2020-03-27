@@ -30,15 +30,18 @@ class Pregunta extends Command {
       'Segurísimo.',
       'YES or YES!',
       'YES or YES or YES!',
+      '¡Hable más fuerte que tengo una toalla!',
+      'Es verdad, lo vi en youtube.',
+      'Es mentira, Dalas ya hizo un vídeo desmintiéndolo.',
       `${random(['Parece', 'Todo indica', 'Las estadísticas me dicen'])} que ${random(['sí', 'no'])}.`,
-      `¡${random(['Sí', 'No'])} es ${random(['sí', 'no'])}!`,
+      `Las cartas dicen que ${random(['sí', 'no'])}.`,
+      `${random(['Sí', 'No'])}. Fuente: Arial 12.`,
       `Clarín dice que ${random(['sí', 'no'])}, pero Clarín miente.`,
       `Le pregunté a ${this.getRandomUser(msg.channel.users)} y me dijo que ${random(['sí', 'no', 'no chingues'])}.`,
     ]
 
-    msg.channel.send(`${msg.author.username} pregunta: ${pregunta}\n🤔 ${random(respuestas)}`);
+    msg.channel.send(`${msg.author.username} pregunta: [b]${pregunta}[/b]\n🤔 ${random(respuestas)}`);
   }
-
 
   /* This method expects a Collection/Map */
   getRandomUser(users) {

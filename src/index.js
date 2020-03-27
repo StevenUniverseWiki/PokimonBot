@@ -56,6 +56,10 @@ client.on('ready', () => {
     }`);
 });
 
+client.on('join', user => {
+    if (user.name === 'LovelySards') msg.channel.send(`Entró la lesviana de ${user.name}`)
+});
+
 client.on('kick', (room, victim, killer) => {
     if(victim.name === client.user.name) room.send(`La concha de tu madre ${killer.name}, das asco con tu cara de gil.`);
     //setTimeout(() => room.send('owo'), 500);
