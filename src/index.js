@@ -57,7 +57,7 @@ client.on('ready', () => {
 });
 
 client.on('join', user => {
-    if (user.name === 'LovelySards') msg.channel.send(`Entró la lesviana de ${user.name}`)
+    if (user.name === 'LovelySards') user.room.send(`Entró la lesviana de ${user.name}. [c="transparent"]<@!263379785516843018>[/c]`);
 });
 
 client.on('kick', (room, victim, killer) => {
