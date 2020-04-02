@@ -12,12 +12,15 @@ class Eval extends Command {
   }
 
   async run(msg) {
-  	if (msg.author.username !== 'TheNozomi') return;
-    try {
-      let evaled = eval(msg.args);
-      return msg.channel.send((`\`\`\`javascript\n${evaled}\n\`\`\``));  
-    } catch(err) {
-      return msg.channel.send(`Error:\n\`\`\`javascript\n${err}\n\`\`\``);
+  	if (msg.author.username == 'TheNozomi' ||
+        msg.author.groups.includes('administrator') ||
+        msg.author.groups.incldes('content-moderator')) {
+      try {
+        let evaled = eval(msg.args);
+        return msg.channel.send((`\`\`\`javascript\n${evaled}\n\`\`\``));  
+      } catch(err) {
+        return msg.channel.send(`Error:\n\`\`\`javascript\n${err}\n\`\`\``);
+      }
     }
   }
 
