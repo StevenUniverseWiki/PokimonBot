@@ -14,7 +14,7 @@ class Eval extends Command {
   async run(msg) {
   	if (msg.author.username == 'TheNozomi' ||
         msg.originalMessage.user.groups.includes('administrator') ||
-        msg.originalMessage.user.groups.incldes('content-moderator')) {
+        msg.originalMessage.user.groups.includes('content-moderator')) {
       try {
         let evaled = eval(msg.args);
         return msg.channel.send((`\`\`\`javascript\n${evaled}\n\`\`\``));  
