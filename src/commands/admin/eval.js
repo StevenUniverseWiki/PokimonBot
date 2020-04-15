@@ -15,7 +15,7 @@ class Eval extends Command {
   	if (msg.author.username == 'TheNozomi' ||
         msg.originalMessage.user.groups.includes('administrator') ||
         msg.originalMessage.user.groups.includes('content-moderator') ||
-        msg.originalmessage.user.staff) {
+        msg.originalMessage.user.staff) {
       try {
         let evaled = eval(msg.args);
         return msg.channel.send((`\`\`\`javascript\n${evaled}\n\`\`\``));  
