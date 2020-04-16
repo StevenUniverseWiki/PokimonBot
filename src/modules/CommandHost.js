@@ -33,7 +33,7 @@ class CommandHost {
     this.prefixes = this.prefixes.map((prefix) => {
       return prefix.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
     });
-    this.commandRegex = new RegExp(`(?<prefix>${this.prefixes.join('|')})(?<cmd>[^\\s]+)(?<args>.*)`);
+    this.commandRegex = new RegExp(`^(?<prefix>${this.prefixes.join('|')})(?<cmd>[^\\s]+)(?<args>.*)`);
     console.log(this.prefixes);
 	}
 
