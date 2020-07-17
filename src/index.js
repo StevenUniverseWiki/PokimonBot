@@ -19,7 +19,7 @@ const client = new Client({
 });
 
 // require bot modules
-const SQLLogger = require('./modules/SQLLogger'),
+const YvesClient = require('./modules/YvesClient'),
     DiscordBridge = require('./modules/DiscordBridge'),
     CommandHost = require('./modules/CommandHost');
 
@@ -35,17 +35,12 @@ const commandHost = new CommandHost({
 client.use(discord);
 client.use(commandHost);
 
-if (process.env.NODE_ENV === 'production') {
-    const sqlLog = new SQLLogger({
-        host: process.env.SQL_HOST,
-        port: process.env.SQL_PORT,
-        user: process.env.SQL_USER,
-        password: process.env.SQL_PASSWORD,
-        db: process.env.SQL_DB,
-        maxConnections: process.env.SQL_MAXCONNECTIONS
-    });
-    client.use(sqlLog);
-}
+const logsService = new YvesClient({
+    server: process.env.YVES_SERVER,
+    username: process.env.YVES_USERNAME,
+    password: process.env.YVES_PASSWORD
+});
+client.use(logsService);
 
 client.on('ready', () => {
     consola.success(`Logged in as ${client.user.name}`);
