@@ -31,16 +31,16 @@ const commandHost = new CommandHost({
     prefixes: ['!', '%']
 });
 
-// attach modules to client
-client.use(discord);
-client.use(commandHost);
-
 const logsService = new YvesClient({
     server: process.env.YVES_SERVER,
     username: process.env.YVES_USERNAME,
     password: process.env.YVES_PASSWORD
 });
-client.use(logsService);
+
+// attach modules to client
+client.use(discord);
+client.use(commandHost);
+if (process.env.NODE_ENV === 'production') client.use(logsService);
 
 client.on('ready', () => {
     consola.success(`Logged in as ${client.user.name}`);

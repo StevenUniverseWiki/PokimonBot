@@ -1,16 +1,14 @@
 dependencies:
-  '@feathersjs/feathers': 4.5.5
-  '@feathersjs/socketio-client': 4.5.6
-  consola: 2.14.0
+  '@feathersjs/feathers': 4.5.8
+  '@feathersjs/socketio-client': 4.5.8
+  consola: 2.15.0
   cross-env: 7.0.2
-  discord.js: 12.2.0_5290a7aab7631971258e1bd11475725e
+  discord.js: 12.3.1_5290a7aab7631971258e1bd11475725e
   dotenv: 8.2.0
   humanize-duration: 3.23.1
-  lodash: 4.17.19
-  mysql2: 2.1.0
+  lodash: 4.17.20
   recursive-readdir: 2.2.2
   socket.io-client: 2.3.0
-  vm2: 3.9.2
   wikichat: github.com/TheNozomi/WikiChat/9a89566e46be39f78e28114f879f0868435f4f2a
 devDependencies:
   nodemon: 2.0.4
@@ -19,10 +17,10 @@ optionalDependencies:
   bufferutil: 4.0.1
   utf-8-validate: 5.0.2
 packages:
-  /@discordjs/collection/0.1.5:
+  /@discordjs/collection/0.1.6:
     dev: false
     resolution:
-      integrity: sha512-CU1q0UXQUpFNzNB7gufgoisDHP7n+T3tkqTsp3MNUkVJ5+hS3BCvME8uCXAUFlz+6T2FbTCu75A+yQ7HMKqRKw==
+      integrity: sha512-utRNxnd9kSS2qhyivo9lMlt5qgAUasH2gb7BEOn6p0efFh24gjGomHzWKMAPn2hEReOPQZCJaRKoURwRotKucQ==
   /@discordjs/form-data/3.0.1:
     dependencies:
       asynckit: 0.4.0
@@ -33,52 +31,52 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-ZfFsbgEXW71Rw/6EtBdrP5VxBJy4dthyC0tpQKGKmYFImlmmrykO14Za+BiIVduwjte0jXEBlhSKf0MWbFp9Eg==
-  /@feathersjs/commons/4.5.5:
+  /@feathersjs/commons/4.5.8:
     dev: false
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-pY1yyrK6kMcdq5cdLkTtGQlsFoT3kexiSXwPc7weXPTRhpqWyZ49c5iy+6JxwyQKaMQUZCfK0KQ3CxlVdTMCQQ==
-  /@feathersjs/errors/4.5.5:
+      integrity: sha512-8HFQjJ5fkciLbvwWOsbtUvAIOFKMRIXLg+Ynm4HLjK2wHwpWtppkYxe3TfVbc254SYigmQ1c9kK0ERjrn6CqqQ==
+  /@feathersjs/errors/4.5.8:
     dependencies:
       debug: 4.1.1
     dev: false
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-VY4OgdazSmWtmTLbr+/G/NDVKiN/3zmEVR1ngw3lgn4BGSoiohbm3m2TQ6ySROzBTpvUjQEhAQzlhlt6+1268w==
-  /@feathersjs/feathers/4.5.5:
+      integrity: sha512-PPpTHpCuWR0nbs4vvQEdXC5gLnWHmeDCF+hm9IJouzYkYIjt0UG/vKvPCBNqCREVHVfSrszdzI1MSeHRSUQddQ==
+  /@feathersjs/feathers/4.5.8:
     dependencies:
-      '@feathersjs/commons': 4.5.5
+      '@feathersjs/commons': 4.5.8
       debug: 4.1.1
-      events: 3.1.0
+      events: 3.2.0
       uberproto: 2.0.6
     dev: false
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-H/7ZI7Xomr/5CcmGgdw8yOlskMPdtGpjnm88HUeOhOOlpdm1gSMWVzGp2Uxw94DOy0SxY+6UgIi535xTvelvxg==
-  /@feathersjs/socketio-client/4.5.6:
+      integrity: sha512-6d8oOPGZu4unda4XXNXV8nzaUI/OsUXY7s30HFDFvf7c81A2oe2uQ/u8OdGEiKpKcX5Ugq9lKYhiYCvMM3dibA==
+  /@feathersjs/socketio-client/4.5.8:
     dependencies:
-      '@feathersjs/transport-commons': 4.5.5
+      '@feathersjs/transport-commons': 4.5.8
       '@types/socket.io-client': 1.4.33
     dev: false
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-eUoQCPmhEo6ypuOQFd6v0hbg+fMl8ayYNNB5s7i2fSUCOfofZzMsb/TafLkWDXyzc9Gb5MFs7wK7jUox29YKpQ==
-  /@feathersjs/transport-commons/4.5.5:
+      integrity: sha512-uBFaBbExRU4Rbn341iS+/6CM2XJZ+uHZyxreLBMpYySeRexLlFilIa1baH0+MWapH/EvQaRNq4Wl1qRTWUBVnw==
+  /@feathersjs/transport-commons/4.5.8:
     dependencies:
-      '@feathersjs/commons': 4.5.5
-      '@feathersjs/errors': 4.5.5
+      '@feathersjs/commons': 4.5.8
+      '@feathersjs/errors': 4.5.8
       debug: 4.1.1
-      lodash: 4.17.19
+      lodash: 4.17.20
       radix-router: 3.0.1
     dev: false
     engines:
       node: '>= 10'
     resolution:
-      integrity: sha512-vCe2daomT7fv1hUDBZEhKWvGC33AdjOcDCZvT2Nu49DNjXTVUN+MzFYDB/ekzXd4A849aI2uurvtwQApWKX1NQ==
+      integrity: sha512-feECInVjgXdNxlXImdhB72+4Q89G4NXQTXcBmtGmI7tJtDFN+5cak23t7vp2EvNUlwexaYGL3DZMVD/KxYU3yA==
   /@sindresorhus/is/0.14.0:
     dev: true
     engines:
@@ -144,10 +142,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA==
-  /ansicolors/0.3.2:
-    dev: false
-    resolution:
-      integrity: sha1-ZlWX3oap/+Oqm/vmyuXG6kJrSXk=
   /anymatch/3.1.1:
     dependencies:
       normalize-path: 3.0.0
@@ -237,6 +231,7 @@ packages:
     dependencies:
       node-gyp-build: 3.7.0
     dev: false
+    optional: true
     requiresBuild: true
     resolution:
       integrity: sha512-xowrxvpxojqkagPcWRQVXZl0YXhRhAtBEIq3VoER1NH5Mw1n1o0ojdspp+GS2J//2gCVyrzQDApQ4unGF+QOoA==
@@ -264,14 +259,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
-  /cardinal/2.1.1:
-    dependencies:
-      ansicolors: 0.3.2
-      redeyed: 2.1.1
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha1-fMEFXYItISlU0HsIXeolHMe8VQU=
   /chalk/3.0.0:
     dependencies:
       ansi-styles: 4.2.1
@@ -365,10 +352,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-aMKprgk5YhBNyH25hj8wGt2+D52Sw1DRRIzqBwLp2Ya9mFmY8KPvvtvmna8SxVR9JMZ4kzMD68N22vlaRpkeFA==
-  /consola/2.14.0:
+  /consola/2.15.0:
     dev: false
     resolution:
-      integrity: sha512-A2j1x4u8d6SIVikhZROfpFJxQZie+cZOfQMyI/tu2+hWXe8iAv7R6FW6s6x04/7zBCst94lPddztot/d6GJiuQ==
+      integrity: sha512-vlcSGgdYS26mPf7qNi+dCisbhiyDnrN1zaRbw3CSuc2wGOMEGGPsp46PdRG5gqXwgtJfjxDkxRNAgRPr1B77vQ==
   /cross-env/7.0.2:
     dependencies:
       cross-spawn: 7.0.3
@@ -444,49 +431,24 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
-  /denque/1.4.1:
-    dev: false
-    engines:
-      node: '>=0.10'
-    resolution:
-      integrity: sha512-OfzPuSZKGcgr96rf1oODnfjqBFmr1DVoc/TrItj3Ohe0Ah1C5WX5Baquw/9U9KovnQ88EqmJbD66rKYUQYN1tQ==
-  /discord.js/12.2.0_5290a7aab7631971258e1bd11475725e:
+  /discord.js/12.3.1_5290a7aab7631971258e1bd11475725e:
     dependencies:
-      '@discordjs/collection': 0.1.5
+      '@discordjs/collection': 0.1.6
       '@discordjs/form-data': 3.0.1
       abort-controller: 3.0.0
-      bufferutil: 4.0.1
       node-fetch: 2.6.0
       prism-media: 1.2.2
       setimmediate: 1.0.5
       tweetnacl: 1.0.3
-      utf-8-validate: 5.0.2
       ws: 7.3.1_5290a7aab7631971258e1bd11475725e
     dev: false
     engines:
       node: '>=12.0.0'
     peerDependencies:
-      bufferutil: ^4.0.1
-      erlpack: discordapp/erlpack
-      libsodium-wrappers: ^0.7.6
-      sodium: ^3.0.2
-      utf-8-validate: ^5.0.2
-      zlib-sync: ^0.1.6
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      erlpack:
-        optional: true
-      libsodium-wrappers:
-        optional: true
-      sodium:
-        optional: true
-      utf-8-validate:
-        optional: true
-      zlib-sync:
-        optional: true
+      bufferutil: '*'
+      utf-8-validate: '*'
     resolution:
-      integrity: sha512-Ueb/0SOsxXyqwvwFYFe0msMrGqH1OMqpp2Dpbplnlr4MzcRrFWwsBM9gKNZXPVBHWUKiQkwU8AihXBXIvTTSvg==
+      integrity: sha512-mSFyV/mbvzH12UXdS4zadmeUf8IMQOo/YdunubG1wWt1xjWvtaJz/s9CGsFD2B5pTw1W/LXxxUbrQjIZ/xlUdw==
   /dot-prop/5.2.0:
     dependencies:
       is-obj: 2.0.0
@@ -551,25 +513,18 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-8/uIhbG12Csjy2JEW7D9pHbreaVaS/OpN3ycnyvElTdwM5n6GY6W6e2IPemfvGZeUMqZ9A/3GqIZMgKnBhAw/Q==
-  /esprima/4.0.1:
-    dev: false
-    engines:
-      node: '>=4'
-    hasBin: true
-    resolution:
-      integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   /event-target-shim/5.0.1:
     dev: false
     engines:
       node: '>=6'
     resolution:
       integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
-  /events/3.1.0:
+  /events/3.2.0:
     dev: false
     engines:
       node: '>=0.8.x'
     resolution:
-      integrity: sha512-Rv+u8MLHNOdMjTAFeT3nCjHn2aGlx435FP/sDHNaRhDEMwyI/aB22Kj2qIN8R0cw3z28psEQLYwxVKLsKrMgWg==
+      integrity: sha512-/46HWwbfCX2xTawVfkKLGxMifJYQBWMwY1mjywRtb4c9x8l5NP3KoJtnIOiL1hfdRkIuYhETxQlo62IF8tcnlg==
   /fill-range/7.0.1:
     dependencies:
       to-regex-range: 5.0.1
@@ -595,12 +550,6 @@ packages:
       - darwin
     resolution:
       integrity: sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==
-  /generate-function/2.3.1:
-    dependencies:
-      is-property: 1.0.2
-    dev: false
-    resolution:
-      integrity: sha512-eeB5GfMNeevm/GRYq20ShmsaGcmI81kIX2K9XQx5miC8KdHaC6Jm0qQ8ZNeGOi7wYB8OsdxKs+Y2oVuTFuVwKQ==
   /get-stream/4.1.0:
     dependencies:
       pump: 3.0.0
@@ -691,14 +640,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-aoOEkomAETmVuQyBx4E7/LfPlC9s8pAA/USl7vFRQpDjepo3aiyvFfOhtXSDqPowdBVPFUZ7onG/KyuolX0qPg==
-  /iconv-lite/0.5.2:
-    dependencies:
-      safer-buffer: 2.1.2
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha512-kERHXvpSaB4aU3eANwidg79K8FlrN77m8G9V+0vOR3HYaRifrlwMEpT7ZBJqLSEIHnEgJTHcWK82wwLwwKwtag==
   /ignore-by-default/1.0.1:
     dev: true
     resolution:
@@ -803,10 +744,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-/2UGPSgmtqwo1ktx8NDHjuPwZWmHhO+gj0f93EkhLB5RgW9RZevWYYlIkS6zePc6U2WpOdQYIwHe9YC4DWEBVg==
-  /is-property/1.0.2:
-    dev: false
-    resolution:
-      integrity: sha1-V/4cTkhHTt1lsJkR8msc1Ald2oQ=
   /is-typedarray/1.0.0:
     dev: true
     resolution:
@@ -841,14 +778,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-weT+r0kTkRQdCdYCNtkMwWXQTMEswKrFBkm4ckQOMVhhqhIMI1UT2hMj+1iigIhgSZm5gTmrRXBNoGUgaTY1xA==
-  /lodash/4.17.19:
+  /lodash/4.17.20:
     dev: false
     resolution:
-      integrity: sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
-  /long/4.0.0:
-    dev: false
-    resolution:
-      integrity: sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==
+      integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
   /lowercase-keys/1.0.1:
     dev: true
     engines:
@@ -861,19 +794,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==
-  /lru-cache/4.1.5:
-    dependencies:
-      pseudomap: 1.0.2
-      yallist: 2.1.2
-    dev: false
-    resolution:
-      integrity: sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
-  /lru-cache/5.1.1:
-    dependencies:
-      yallist: 3.1.1
-    dev: false
-    resolution:
-      integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   /make-dir/3.1.0:
     dependencies:
       semver: 6.3.0
@@ -917,30 +837,6 @@ packages:
   /ms/2.1.2:
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
-  /mysql2/2.1.0:
-    dependencies:
-      cardinal: 2.1.1
-      denque: 1.4.1
-      generate-function: 2.3.1
-      iconv-lite: 0.5.2
-      long: 4.0.0
-      lru-cache: 5.1.1
-      named-placeholders: 1.1.2
-      seq-queue: 0.0.5
-      sqlstring: 2.3.2
-    dev: false
-    engines:
-      node: '>= 8.0'
-    resolution:
-      integrity: sha512-9kGVyi930rG2KaHrz3sHwtc6K+GY9d8wWk1XRSYxQiunvGcn4DwuZxOwmK11ftuhhwrYDwGx9Ta4VBwznJn36A==
-  /named-placeholders/1.1.2:
-    dependencies:
-      lru-cache: 4.1.5
-    dev: false
-    engines:
-      node: '>=6.0.0'
-    resolution:
-      integrity: sha512-wiFWqxoLL3PGVReSZpjLVxyJ1bRqe+KKJVbr4hGs1KWfTZTQyezHFBbuKj9hsizHyGV2ne7EMjHdxEGAybD5SA==
   /node-fetch/2.6.0:
     dev: false
     engines:
@@ -950,6 +846,7 @@ packages:
   /node-gyp-build/3.7.0:
     dev: false
     hasBin: true
+    optional: true
     resolution:
       integrity: sha512-L/Eg02Epx6Si2NXmedx+Okg+4UHqmaf3TNcxd50SF9NQGcJaON3AtU++kax69XV7YWz4tUspqZSAsVofhFKG2w==
   /nodemon/2.0.4:
@@ -1065,10 +962,6 @@ packages:
         optional: true
     resolution:
       integrity: sha512-I+nkWY212lJ500jLe4tN9tWO7nRiBAVdMv76P9kffZjYhw20raMlW1HSSvS+MLXC9MmbNZCazMrAr+5jEEgTuw==
-  /pseudomap/1.0.2:
-    dev: false
-    resolution:
-      integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
   /psl/1.8.0:
     dev: false
     resolution:
@@ -1134,12 +1027,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-nRCcW9Sj7NuZwa2XvH9co8NPeXUBhZP7CRKJtU+cS6PW9FpCIFoI5ib0NT1ZrbNuPoRy0ylyCaUL8Gih4LSyFg==
-  /redeyed/2.1.1:
-    dependencies:
-      esprima: 4.0.1
-    dev: false
-    resolution:
-      integrity: sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs=
   /registry-auth-token/4.2.0:
     dependencies:
       rc: 1.2.8
@@ -1162,10 +1049,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec=
-  /safer-buffer/2.1.2:
-    dev: false
-    resolution:
-      integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
   /semver-diff/3.1.1:
     dependencies:
       semver: 6.3.0
@@ -1184,10 +1067,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
-  /seq-queue/0.0.5:
-    dev: false
-    resolution:
-      integrity: sha1-1WgS4cAXpuTnw+Ojeh2m143TyT4=
   /setimmediate/1.0.5:
     dev: false
     resolution:
@@ -1237,12 +1116,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-hczmV6bDgdaEbVqhAeVMM/jfUfzuEZHsQg6eOmLgJht6G3mPKMxYm75w2+qhAQZ+4X+1+ATZ+QFKeOZD5riHng==
-  /sqlstring/2.3.2:
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha512-vF4ZbYdKS8OnoJAWBmMxCQDkiEBkGQYU7UZPtL8flbDRSNkhaXvRJ279ZtI6M+zDaQovVU4tuRgzK5fVhvFAhg==
   /string-width/3.1.0:
     dependencies:
       emoji-regex: 7.0.3
@@ -1408,16 +1281,10 @@ packages:
     dependencies:
       node-gyp-build: 3.7.0
     dev: false
+    optional: true
     requiresBuild: true
     resolution:
       integrity: sha512-SwV++i2gTD5qh2XqaPzBnNX88N6HdyhQrNNRykvcS0QKvItV9u3vPEJr+X5Hhfb1JC0r0e1alL0iB09rY8+nmw==
-  /vm2/3.9.2:
-    dev: false
-    engines:
-      node: '>=6.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-nzyFmHdy2FMg7mYraRytc2jr4QBaUY3TEGe3q3bK8EgS9WC98wxn2jrPxS/ruWm+JGzrEIIeufKweQzVoQEd+Q==
   /which/2.0.2:
     dependencies:
       isexe: 2.0.0
@@ -1483,14 +1350,6 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-wodrBhaKrcQOV9l+gRkayPQ5iz4=
-  /yallist/2.1.2:
-    dev: false
-    resolution:
-      integrity: sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
-  /yallist/3.1.1:
-    dev: false
-    resolution:
-      integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==
   /yeast/0.1.2:
     dev: false
     resolution:
@@ -1504,22 +1363,21 @@ packages:
     dev: false
     name: wikichat
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/TheNozomi/WikiChat/tar.gz/9a89566e46be39f78e28114f879f0868435f4f2a'
     version: 0.0.14
 specifiers:
-  '@feathersjs/feathers': ^4.5.3
-  '@feathersjs/socketio-client': ^4.5.3
+  '@feathersjs/feathers': ^4.5.8
+  '@feathersjs/socketio-client': ^4.5.8
   bufferutil: ^4.0.1
-  consola: ^2.11.3
+  consola: ^2.15.0
   cross-env: ^7.0.2
-  discord.js: ^12.0.2
+  discord.js: ^12.3.1
   dotenv: ^8.2.0
   humanize-duration: ^3.22.0
-  lodash: ^4.17.15
-  mysql2: ^2.1.0
+  lodash: ^4.17.20
   nodemon: ^2.0.2
   recursive-readdir: ^2.2.2
   socket.io-client: ^2.3.0
   utf-8-validate: ^5.0.2
-  vm2: ^3.9.1
   wikichat: 'https://github.com/TheNozomi/WikiChat'

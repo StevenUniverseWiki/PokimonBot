@@ -13,23 +13,24 @@ class DiscordBridge {
       });
       this.discordChannel = this.discord.guilds.resolve(process.env.DISCORD_GUILD).channels.resolve(process.env.DISCORD_CHANNEL);
 
-      // wikia chat listeners
-      this.chatClient.on('message', this.sendWikiaToDiscord.bind(this));
-      this.chatClient.on('join', this.logUserJoin.bind(this));
-      this.chatClient.on('leave', this.logUserLeave.bind(this));
-      this.chatClient.on('kick', this.logKick.bind(this));
-      this.chatClient.on('ban', this.logBan.bind(this));
-      this.chatClient.on('unban', this.logUnban.bind(this));      
-    });
+      if (process.env.DISCORD_BRIDGE == 1) {
+        // wikia chat listeners
+        this.chatClient.on('message', this.sendWikiaToDiscord.bind(this));
+        this.chatClient.on('join', this.logUserJoin.bind(this));
+        this.chatClient.on('leave', this.logUserLeave.bind(this));
+        this.chatClient.on('kick', this.logKick.bind(this));
+        this.chatClient.on('ban', this.logBan.bind(this));
+        this.chatClient.on('unban', this.logUnban.bind(this));
 
-    // discord listeners
-    this.discord.on('message', message => {
-      if (message.author.id === this.discord.user.id) return;
-      if (message.channel.id == process.env.DISCORD_CHANNEL) {
-        this.sendDiscordToWikia(message);
+        // discord listeners
+        this.discord.on('message', message => {
+          if (message.author.id === this.discord.user.id) return;
+          if (message.channel.id == process.env.DISCORD_CHANNEL) {
+            this.sendDiscordToWikia(message);
+          }
+        });       
       }
     });
-
 	}
 
   logUserJoin(user) {
@@ -86,16 +87,7 @@ class DiscordBridge {
         messageText+= `\n[b][${attachment.name}][/b]: ${attachment.url}`;
       });
     }
-    /*
-    if (message.mentions.users) {
-      message.mentions.users.forEach((user) => {
-        console.log(user);
-        console.log(messageText);
-        let re = new RegExp(`<@!${user.id}>`);
-        messageText.replace(re, `@${user.username}#${user.discriminator}`);
-      });
-    }
-    */
+
     wikiaChat.room.send(messageText);
   }
 
