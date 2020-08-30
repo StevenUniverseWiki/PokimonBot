@@ -107,7 +107,7 @@ class YvesClient {
       if (this.firstConnection) {
         client.emit('yvesReady', client.yves);
         this.firstConnection = false;
-        this.messageService = client.yves.service('api/entries');
+        this.messageService = client.yves.service('entries');
 
         client.on('message', this.logMessage.bind(this));
         client.on('join', this.logUserJoin.bind(this));
