@@ -8,12 +8,13 @@ class CommandHost {
     this.commands = {};
     this.aliases = {};
     this.prefixes = config.prefixes;
-    readdir(config.commandsDir).then((files) => {
+    readdir(config.commandsDir).then(function(files) {
       files.forEach((file) => {
         if (!file.endsWith('.js')) return;
         try {
           const command = require(file);
           const cmd = new command({
+            client: this.client,
             strings: {'hello': 'world'}
           });
           this.commands[cmd.cmd] = cmd;
@@ -27,13 +28,13 @@ class CommandHost {
           consola.error(`Could not load ${file}: ${err}`);
         }
       });
-    }, (err) => {
+    }.bind(this), (err) => {
       console.error('Something exploded: ' + err);
     });
     this.prefixes = this.prefixes.map((prefix) => {
       return prefix.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
     });
-    this.commandRegex = new RegExp(`^(?<prefix>${this.prefixes.join('|')})(?<cmd>[^\\s]+)(?<args>.*)`);
+    this.commandRegex = new RegExp(`^(?<prefix>${this.prefixes.join('|')})(?<cmd>[^\\s]+)(?<args>.*)`, 'm');
     console.log(this.prefixes);
 	}
 
@@ -68,15 +69,13 @@ class CommandHost {
         originalMessage: msg
       });
 
-      // console.log(msgObj);
-
       command.run(msgObj);
     }
 
   }
 
 	setup(client) {
-    //this.chatClient = client;
+    this.client = client;
     client.on('message', this.onWikiaMessage.bind(this));
 	}
 
