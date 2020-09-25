@@ -11,9 +11,9 @@ class DiscordBridge {
       this.discord.user.setActivity('el vacío', {
         type: 'WATCHING'
       });
-      this.discordChannel = this.discord.guilds.resolve(process.env.DISCORD_GUILD).channels.resolve(process.env.DISCORD_CHANNEL);
-
+      
       if (process.env.DISCORD_BRIDGE == 1) {
+        this.discordChannel = this.discord.guilds.resolve(process.env.DISCORD_GUILD).channels.resolve(process.env.DISCORD_CHANNEL);
         // wikia chat listeners
         this.chatClient.on('message', this.sendWikiaToDiscord.bind(this));
         this.chatClient.on('join', this.logUserJoin.bind(this));

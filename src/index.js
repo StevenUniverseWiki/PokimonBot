@@ -21,7 +21,8 @@ const client = new Client({
 // require bot modules
 const YvesClient = require('./modules/YvesClient'),
     DiscordBridge = require('./modules/DiscordBridge'),
-    CommandHost = require('./modules/CommandHost');
+    CommandHost = require('./modules/CommandHost'),
+    EventStats = require('./modules/EventStats');
 
 // create modules instance
 const discord = new DiscordBridge();
@@ -37,10 +38,13 @@ const logsService = new YvesClient({
     password: process.env.YVES_PASSWORD
 });
 
+const evtStats = new EventStats();
+
 // attach modules to client
 client.use(discord);
 client.use(commandHost);
-if (process.env.NODE_ENV === 'production') client.use(logsService);
+client.use(logsService);
+client.use(evtStats);
 
 client.on('ready', () => {
     consola.success(`Logged in as ${client.user.name}`);

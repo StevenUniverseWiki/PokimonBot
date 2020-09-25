@@ -12,7 +12,7 @@ class Eval extends Command {
   }
 
   async run(msg) {
-  	if (msg.author.username == 'TheNozomi') {
+  	if (msg.author.username === 'TheNozomi' || msg.author.username === 'Weats') {
       try {
         let evaled = eval(msg.args);
         return msg.channel.send((`\`\`\`javascript\n${evaled}\n\`\`\``));  
