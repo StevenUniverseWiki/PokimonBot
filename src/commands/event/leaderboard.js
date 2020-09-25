@@ -17,6 +17,8 @@ class Leaderboard extends Command {
 
   async run(msg) {
     if (!this.service) return msg.channel.send(`No se puede conectar con el back-end. Probablemente esto sea un bug. TheNozomi pls fix kthxbye.`);
+    const eventManagers = ['Taxcy Marsopas1', 'Weats', 'TheNozomi', 'Rodehi'];
+    if (!eventManagers.includes(msg.author.username)) return;
     try {
       const query = await this.service.find({
         query: {

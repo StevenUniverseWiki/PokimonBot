@@ -16,7 +16,7 @@ class GivePoints extends Command {
 
   async run(msg) {
     const eventManagers = ['Taxcy Marsopas1', 'Weats', 'TheNozomi', 'Rodehi'];
-    if (!eventManagers.includes(msg.author.username)) return msg.channel.send('No tení permiso para hacer eso!');
+    if (!eventManagers.includes(msg.author.username)) return;
     const mainRoom = msg.originalMessage.room.chat.room;
     const argsArray = msg.args.split(';');
     if (argsArray.length < 3) return msg.channel.send('❌ faltan argumentos. Uso: !givepoints Usuario;cantidad;descripción');
