@@ -16,7 +16,7 @@ class Slay extends Command {
   }
 
   async run(msg) {
-    const eventManagers = ['Taxcy Marsopas1', 'Weats', 'TheNozomi', 'Rodehi'];
+    const eventManagers = ['Taxcy Marsopas1', 'Weats', 'TheNozomi'];
     if (!eventManagers.includes(msg.author.username)) return;
     const mainRoom = msg.originalMessage.room.chat.room;
     if (!msg.args.trim()) return msg.channel.send('❌ faltan argumentos. Uso: !slay Usuario');
